@@ -1,0 +1,46 @@
+<html>
+    <head>
+        <link rel="stylesheet" href="animate.css">
+        <style>
+            .test
+            {
+                width: 200px;
+                height: 200px;
+                background-color:#460F01;
+            }
+        </style>
+        <script src="jquery.js"></script>
+        <script>
+        
+            function animar()
+            {
+                console.log("animando: " + $("#test").hasClass('animated'));
+                
+                $("#test").addClass('animated');
+                 $("#test").addClass('flipInX');
+                
+                setTimeout(function()
+               {
+                    $("#test").removeClass('animated');
+                    $("#test").removeClass('flipInX');
+                },1000);
+                
+                
+                /*if($("#test").hasClass('animated'))
+                {
+                    
+                }
+                else
+                {
+                     
+                }*/
+            }
+        </script>
+    </head>
+    <body>
+        <button onclick='animar()'>Animar!</button>
+        <div id="test" class="test ">
+        jaksdlfjaskldñ
+        </div>
+    </body>
+</html>
